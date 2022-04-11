@@ -15,16 +15,20 @@ do
 
     decimal area = length * width;
     decimal perimeter = 2 * (length + width);
-    decimal volume = length * length * length;
-   
+    decimal volume = (length * length * length);
 
-    Console.WriteLine(" The area for " + room + " is " + area + " feet");
-    Console.WriteLine(" The perimeter for " + room + " is " + perimeter + " feet");
+    Console.WriteLine(" The area for the " + room + " is " + area + " feet");
+    Console.WriteLine(" The perimeter for the " + room + " is " + perimeter + " feet");
+    Console.WriteLine("The volume for the " + room + " is " + volume + "feet");
+
+    if (area <= 250) Console.WriteLine("This is a small room.");
+    else if(area > 250 && area <650) Console.WriteLine(" This is a medium sized room ");
+    else if (area > 650) Console.WriteLine("This is a pretty big room");
 
 
     Console.WriteLine();
         Console.WriteLine(" Would you like to measure another room?");
-        Console.WriteLine("Please enter yes or no");
+        Console.WriteLine(" Please enter yes or no ");
 
         var input = (Console.ReadLine());
         if (input.ToLower() == "yes" || input.ToLower() == "y")
