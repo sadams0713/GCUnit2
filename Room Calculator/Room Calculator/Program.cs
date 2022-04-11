@@ -1,8 +1,10 @@
 ﻿
         var Continue_Running = false;
+Console.WriteLine(" Welcome to the Room Measurement Program!");
 do
 {
-    Console.WriteLine("What room would you like to measure?");
+   
+    Console.WriteLine(" What room would you like to measure?");
     string room = Console.ReadLine();
 
     Console.WriteLine("Please enter the length of the " + room + " in feet.");
@@ -19,11 +21,11 @@ do
 
     Console.WriteLine(" The area for the " + room + " is " + area + " feet");
     Console.WriteLine(" The perimeter for the " + room + " is " + perimeter + " feet");
-    Console.WriteLine("The volume for the " + room + " is " + volume + "feet");
+    Console.WriteLine(" The volume for the " + room + " is " + volume + "feet");
 
-    if (area <= 250) Console.WriteLine("This is a small room.");
-    else if(area > 250 && area <650) Console.WriteLine(" This is a medium sized room ");
-    else if (area > 650) Console.WriteLine("This is a pretty big room");
+    if (area <= 250) Console.WriteLine(" This is a small room.");
+    else if(area > 250 && area <650) Console.WriteLine(" This is a medium sized room. ");
+    else if (area > 650) Console.WriteLine(" This is a pretty big room. ");
 
 
     Console.WriteLine();
@@ -43,6 +45,8 @@ do
 }
 
 while (Continue_Running == true);
+
+Console.WriteLine(" Thanks for using the Room Measurement Program! See you next time.");
 
         
        
