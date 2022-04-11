@@ -15,7 +15,7 @@ do
 
     decimal width = decimal.Parse(Console.ReadLine());
 
-    Console.WriteLine(" Please enter the height of the room in feet. ");
+    Console.WriteLine(" Please enter the height of the " + room + " in feet. ");
 
     decimal height = decimal.Parse(Console.ReadLine());
 
@@ -23,17 +23,17 @@ do
     decimal perimeter = 2 * (length + width);
     decimal volume = (length * width * height);
 
-    Console.WriteLine(" The area for the " + room + " is " + area + " feet");
-    Console.WriteLine(" The perimeter for the " + room + " is " + perimeter + " feet");
-    Console.WriteLine(" The volume for the " + room + " is " + volume + "feet");
+    Console.WriteLine(" The area for the " + room + " is " + area + " feet. ");
+    Console.WriteLine(" The perimeter for the " + room + " is " + perimeter + " feet. ");
+    Console.WriteLine(" The volume for the " + room + " is " + volume + " feet. ");
 
-    if (area <= 250) Console.WriteLine(" This is a small room.");
+    if (area <= 250) Console.WriteLine(" This is a small room. ");
     else if(area > 250 && area <650) Console.WriteLine(" This is a medium sized room. ");
     else if (area > 650) Console.WriteLine(" This is a pretty big room. ");
 
 
     Console.WriteLine();
-        Console.WriteLine(" Would you like to measure another room?");
+        Console.WriteLine(" Would you like to measure another room? ");
         Console.WriteLine(" Please enter yes or no ");
 
         var input = (Console.ReadLine());
@@ -50,7 +50,7 @@ do
 
 while (Continue_Running == true);
 
-Console.WriteLine(" Thanks for using the Room Measurement Program! See you next time.");
+Console.WriteLine(" Thanks for using the Room Measurement Program! See you next time. ");
 
         
        
