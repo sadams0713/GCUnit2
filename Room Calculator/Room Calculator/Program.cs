@@ -9,19 +9,19 @@ do
 
     Console.WriteLine("Please enter the length of the " + room + " in feet.");
 
-    decimal length = decimal.Parse(Console.ReadLine());
+    double length = double.Parse(Console.ReadLine());
 
     Console.WriteLine(" Please enter the width of the " +room +  " in feet.");
 
-    decimal width = decimal.Parse(Console.ReadLine());
+    double width = double.Parse(Console.ReadLine());
 
     Console.WriteLine(" Please enter the height of the " + room + " in feet. ");
 
-    decimal height = decimal.Parse(Console.ReadLine());
+    double height = double.Parse(Console.ReadLine());
 
-    decimal area = length * width;
-    decimal perimeter = 2 * (length + width);
-    decimal volume = (length * width * height);
+    double area = length * width;
+    double perimeter = 2 * (length + width);
+    double volume = (length * width * height);
 
     Console.WriteLine(" The area for the " + room + " is " + area + " feet. ");
     Console.WriteLine(" The perimeter for the " + room + " is " + perimeter + " feet. ");
