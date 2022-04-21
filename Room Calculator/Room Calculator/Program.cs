@@ -1,56 +1,48 @@
-﻿
-        var Continue_Running = false;
-Console.WriteLine(" Welcome to the Room Measurement Program!");
-do
+﻿class Program
 {
-   
-    Console.WriteLine(" What room would you like to measure?");
-    string room = Console.ReadLine();
+    public static void Main()
+    {
 
-    Console.WriteLine("Please enter the length of the " + room + " in feet.");
-
-    double length = double.Parse(Console.ReadLine());
-
-    Console.WriteLine(" Please enter the width of the " +room +  " in feet.");
-
-    double width = double.Parse(Console.ReadLine());
-
-    Console.WriteLine(" Please enter the height of the " + room + " in feet. ");
-
-    double height = double.Parse(Console.ReadLine());
-
-    double area = length * width;
-    double perimeter = 2 * (length + width);
-    double volume = (length * width * height);
-
-    Console.WriteLine(" The area for the " + room + " is " + area + " feet. ");
-    Console.WriteLine(" The perimeter for the " + room + " is " + perimeter + " feet. ");
-    Console.WriteLine(" The volume for the " + room + " is " + volume + " feet. ");
-
-    if (area <= 250) Console.WriteLine(" This is a small room. ");
-    else if(area > 250 && area <650) Console.WriteLine(" This is a medium sized room. ");
-    else if (area > 650) Console.WriteLine(" This is a pretty big room. ");
+        var OnemoAgain = false;
+        Console.WriteLine(" Welcome to the Room Measurement Program!");
+        string rm = GetUserInput("What room would you like to measure?");
+          string room = (Console.ReadLine());
+        Console.WriteLine()
 
 
-    Console.WriteLine();
-        Console.WriteLine(" Would you like to measure another room? ");
-        Console.WriteLine(" Please enter yes or no ");
 
-        var input = (Console.ReadLine());
-        if (input.ToLower() == "yes" || input.ToLower() == "y")
-        {
-            Continue_Running = true;
-        }          
-        else
-        {
-            Continue_Running = false;
-        }
-    
+
+            while(OnemoAgain==true )
+            { 
+            string len = GetUserInput($"Please enter the length of the {room}");
+            double length = double.Parse(len);
+
+            string wid = GetUserInput($"Please input a width for the {room}");
+            double width = double.Parse(wid);
+
+            string hei = GetUserInput($"Please input a height for the {room}");
+            double height = double.Parse(hei);
+
+            double area = GetArea(length, width);
+            Console.WriteLine("Your area is: " + area);
+
+            double volume = GetVolume(length, width, height);
+            Console.WriteLine("Your volume is: " + volume);
+
+            }
+    }
+    public static string GetUserInput(string prompt)
+    {
+        Console.WriteLine(prompt);
+        string input = Console.ReadLine();
+        return input;
+    }
+    public static double GetArea(double length, double width)
+    {
+        return length * width;
+    }
+    public static double GetVolume(double length, double width, double height)
+    {
+        return length * width * height;
+    }
 }
-
-while (Continue_Running == true);
-
-Console.WriteLine(" Thanks for using the Room Measurement Program! See you next time. ");
-
-        
-       
